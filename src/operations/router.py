@@ -34,7 +34,7 @@ async def get_operation(
     return result
 
 
-@router.get("/", response_model=List[OperationRead])
+@router.get("/")
 async def get_specific_operations(
         operation_type: str | None = None,
         session: AsyncSession = Depends(get_async_session),
