@@ -30,7 +30,7 @@ async def get_users_roles(role_id: int, db: AsyncSession = Depends(get_async_ses
 
 @router.post('/')
 async def create_role(db: AsyncSession = Depends(get_async_session)):
-    stmt = insert(Role).values(name='user', permission=None)
+    stmt = insert(Role).values(name='user', permissions=None)
     await db.execute(stmt)
     await db.commit()
     return {'success': 'status'}
