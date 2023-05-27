@@ -23,6 +23,9 @@ router = APIRouter(
     tags=["Operation"]
 )
 
+def summa(x, y):
+    return x + y
+
 @router.post('/file')
 def create_file():
     with open("txt.txt", 'w') as file:
