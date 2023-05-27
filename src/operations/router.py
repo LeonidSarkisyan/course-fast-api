@@ -23,6 +23,10 @@ router = APIRouter(
     tags=["Operation"]
 )
 
+@router.post('/file')
+def create_file():
+    open("txt.txt")
+    return "File created"
 
 @router.get('/{operation_id}')
 async def get_operation(
