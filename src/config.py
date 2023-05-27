@@ -16,3 +16,7 @@ SMTP_USER = os.environ.get("SMTP_USER")
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
 
 SECRET_AUTH = os.environ.get("SECRET_AUTH")
+
+class YandexS3Config:
+    AWS_ACCESS_KEY_ID = os.environ.get("YANDEX_S3_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("YANDEX_S3_SECRET_KEY")
