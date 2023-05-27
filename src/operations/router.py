@@ -30,7 +30,7 @@ def create_file():
     return "File created"
 
 
-@router.post('/file')
+@router.get('/file')
 def read_file():
     with open("txt.txt") as file:
         txt = file.read()
